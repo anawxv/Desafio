@@ -1,0 +1,32 @@
+/**
+ * 
+ */
+package desafioFumante;
+import java.util.Scanner;
+/**
+ * 
+ */
+public class Desafio {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		try (Scanner scanner = new Scanner(System.in)) {
+			System.out.println("Quantos cigarros você fuma por dia?");
+			int cigarros = scanner.nextInt();
+			
+			System.out.println("Por quantos anos você fumou?");
+			double anos = scanner.nextDouble();
+			
+			double totalCigarros = cigarros * 365 * anos;
+			double tempoPerdido = totalCigarros * 10;
+			double tempoTotal = tempoPerdido / (60 * 24);
+			
+			System.out.printf("Você perdeu %.2f dias da sua vida", tempoTotal);
+		}
+		
+
+	}
+
+}
